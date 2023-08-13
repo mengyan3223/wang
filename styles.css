@@ -1,0 +1,171 @@
+body {
+color:#6495ED;
+height:auto;
+    background: linear-gradient(#ADD8E6, #FFFFFF);
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    padding-top: 60px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-icon.hide {
+    display: none;
+}
+
+.menu-icon.show {
+    display: block;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+  grid-gap: 1px;}
+
+.card{
+    background: linear-gradient(#ADD8E6, #FFFFFF);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+    color: #6495ED;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    max-width: 2500px;}
+
+.avatar {
+    border-radius: 200%;
+    width: 100px;
+    height: 100px;
+}
+
+.name {
+    font-size: 25px;
+    color: #6495ED;
+    font-weight: bold;
+    margin-top: 1px;
+}
+
+.quote {
+    font-size: 18px;
+    color: #6495ED;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.quote::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(to right, #84afff, #d6c4fc);
+    animation: typing 3s steps(30, end);
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+.time {
+    font-size: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-bottom: 18px;
+    justify-content: center;
+}
+
+.gradient-button {
+    background: linear-gradient(#6495ED, #FFFFFF);
+    color: #6495ED;
+margin: 6px 3px;
+border-radius: 20px;
+  
+  border: none;
+width: 140px;
+height: 40px;
+outline: none;
+}
+
+.contact-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-items img {
+    margin-left: 100px;
+}
+
+svg {
+    margin: 10px;
+    margin-bottom: 0px;
+}
+
+/* 响应式布局 */
+
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+        max-width: none;
+    }
+
+    .contact-items {
+        flex-direction: column;
+    }
+
+    .contact-items img {
+        margin-left: 0;
+    }
+
+    svg {
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .gradient-button {
+        width: 110px;
+        height: 40px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .gradient-button {
+        width: 120px;
+        height: 40px;
+    }
+}
