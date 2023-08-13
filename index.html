@@ -2,6 +2,35 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
+<audio id="bg-music" src="123.mp3" autoplay loop></audio>
+  
+  <button id="music-button" onclick="toggleMusic()">暂停音乐</button>
+
+  <script>
+    function toggleMusic() {
+      var music = document.getElementById("bg-music");
+      var button = document.getElementById("music-button");
+      
+      if (music.paused) {
+        music.play();
+        button.textContent = "暂停音乐";
+        
+        // 设置50秒后自动暂停音乐
+        setTimeout(function() {
+          music.pause();
+          button.textContent = "播放音乐";
+        }, 50000);
+      } else {
+        music.pause();
+        button.textContent = "播放音乐";
+      }
+    javascript
+document.addEventListener('DOMContentLoaded', function() {
+  var music = document.getElementById("bg-music");
+  music.play();
+})
+    }
+  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
