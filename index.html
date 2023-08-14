@@ -61,8 +61,40 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="card"><div id="quote"></div></div>
     </div>
     </div>
-    <p style=text-align:center;> 2023-2099 永久开发商梦魇网络团队</p>
-
     <script src="script.js"></script>
+    <footer>
+        <p id="timer"></p>
+    </footer>
+
+    <script>
+        function updateTimer() {
+            // 获取当前日期和时间
+            var currentDate = new Date();
+
+            // 设置初始加载日期
+            var startDate = new Date('2023-08-10');
+
+            // 计算运行时间（毫秒）
+            var runningTime = currentDate.getTime() - startDate.getTime();
+
+            // 将毫秒转换为天、小时、分钟和秒
+            var seconds = Math.floor(runningTime / 1000) % 60;
+            var minutes = Math.floor(runningTime / (1000 * 60)) % 60;
+            var hours = Math.floor(runningTime / (1000 * 60 * 60)) % 24;
+            var days = Math.floor(runningTime / (1000 * 60 * 60 * 24));
+
+            // 构建运行时间字符串
+            var runningTimeString = days + '天 ' + hours + '小时 ' + minutes + '分钟 ' + seconds + '秒';
+
+            // 显示运行时间
+            document.getElementById('timer').innerHTML = '已运行：' + runningTimeString;
+        }
+
+        // 初始加载时立即更新时间
+        updateTimer();
+
+        // 每秒钟更新一次时间
+        setInterval(updateTimer, 1000);
+    </script>
 </body>
 </html>
