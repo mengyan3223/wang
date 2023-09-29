@@ -1,35 +1,8 @@
 梦魇网络团队
 <!DOCTYPE html>
 <html lang="zh">
+<link rel="stylesheet" id='font-awesome-css' href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" type='text/css' media='all'>
 <head>
-<audio id="bg-music" src="3223.mp3" autoplay loop></audio>
-  
-  <button id="music-button" onclick="toggleMusic()">暂停音乐</button>
-
-  <script>
-    function toggleMusic() {
-      var music = document.getElementById("bg-music");
-      var button = document.getElementById("music-button");
-      
-      if (music.paused) {
-        music.play();
-        button.textContent = "暂停音乐";
-        
-        // 设置50秒后自动暂停音乐
-        setTimeout(function() {
-          music.pause();
-          button.textContent = "播放音乐";
-        }, 180000);
-      } else {
-        music.pause();
-        button.textContent = "播放音乐";
-      }
-    javascript
-document.addEventListener('DOMContentLoaded', function() {
-  var music = document.getElementById("bg-music");
-  music.play();
-})
-    }
   </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <link rel="stylesheet" href="styles.css">
     <title>梦魇导航</title>
 </head>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<div id="music" key="6516c6a85a6bd" api="https://music.lolimi.cn"></div><script id="xplayer" src="https://music.lolimi.cn/Static/player3/js/player.js" ></script>
 <body>
 <h2 style=text-align:center;>合集主页</h2>
     <div class="container">
